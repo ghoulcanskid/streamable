@@ -1,0 +1,27 @@
+        if Settings.Kalslock.pingprediction == true then
+             pingvalue = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+             split = string.split(pingvalue,'(')
+             ping = tonumber(split[1])
+            if ping < 130 then
+                PredictionValue = 0.14537
+            elseif ping < 125 then
+                PredictionValue = 0.909
+            elseif ping < 110 then
+                PredictionValue = 0.14
+            elseif ping < 105 then
+                PredictionValue = 0.138
+            elseif ping < 90 then
+                PredictionValue = 0.136
+            elseif ping < 80 then
+                PredictionValue = 0.134
+            elseif ping < 70 then
+                PredictionValue = 0.135
+            elseif ping < 60 then
+                PredictionValue = 0.113
+            elseif ping < 50 then
+                PredictionValue = 0.132
+            elseif ping < 40 then
+                PredictionValue = 0.132
+            end
+        end
+    end)
